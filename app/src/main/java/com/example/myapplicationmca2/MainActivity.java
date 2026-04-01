@@ -17,7 +17,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MainActivity extends AppCompatActivity {
 
     EditText e1;
-    Button btnpress,btnsubmit,data,sms,ListView1,ACTV,WV,cal,RV,OM,context,OC,Tween,login,vv;
+    Button btnpress,btnsubmit,data,sms,ListView1,ACTV,WV,cal,RV,OM,context,OC,Tween,login,vv,RV2,SP;
     TextView t1,t2;
 
     @SuppressLint("MissingInflatedId")
@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         Tween=findViewById(R.id.Tween);
         login=findViewById(R.id.Login);
         vv=findViewById(R.id.vv);
+        RV2=findViewById(R.id.RV2);
+        SP=findViewById(R.id.SP);
         btnpress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -163,6 +165,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(MainActivity.this,MainActivityVideoView.class);
+                startActivity(i);
+            }
+        });
+        RV2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this, MainActivityRecycleView.class);
+                startActivity(i);
+            }
+        });
+        SP.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(MainActivity.this, SharedPreferences.class);
                 startActivity(i);
             }
         });

@@ -47,7 +47,7 @@ public class MainActivityRecycle extends AppCompatActivity {
             return data.length;
         }
 
-        class ViewHolder extends RecyclerView.ViewHolder {
+         class ViewHolder extends RecyclerView.ViewHolder {
             TextView textView;
 
             ViewHolder(View itemView) {
